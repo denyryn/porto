@@ -1,0 +1,123 @@
+---
+import { navItems, site } from "../constants/site";
+---
+
+<header class="relative z-30 border-b border-ink-black bg-parchment">
+  <div
+    class="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-[14px] py-[10px] sm:h-[58px] sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:py-0"
+  >
+    <p class="hidden font-body text-[16px] leading-none text-ink-black sm:block">
+      {site.location}
+    </p>
+
+    <a
+      href="/"
+      class="truncate font-body text-[14px] leading-none text-ink-black sm:text-center sm:text-[17px] md:text-[19px]"
+    >
+      {site.wordmark}
+    </a>
+
+    <details class="menu relative justify-self-end">
+      <summary
+        class="menu-toggle flex h-[38px] w-[38px] cursor-pointer list-none flex-col items-center justify-center gap-[5px]"
+        aria-label="Menu"
+      >
+        <span class="block h-px w-[22px] bg-ink-black"></span>
+        <span class="block h-px w-[22px] bg-ink-black"></span>
+        <span class="block h-px w-[22px] bg-ink-black"></span>
+      </summary>
+
+      <nav
+        aria-label="Sections"
+        class="menu-panel absolute right-0 top-[calc(100%+10px)] z-20 w-[190px] border border-ink-black bg-parchment py-[10px]"
+      >
+        <ul class="flex flex-col">
+          {
+            navItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="menu-link block px-[14px] py-[7px] font-body text-[17px] leading-none text-ink-black transition-colors duration-100 hover:bg-bone-cream"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  import "../scripts/menu";
+</script>
+
+<style>
+  .menu-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu-toggle::marker {
+    content: "";
+  }
+
+  .menu[open] .menu-toggle {
+    background-color: var(--color-bone-cream);
+  }
+
+  /* Open state reads as a close control. */
+  .menu[open] .menu-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .menu[open] .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu[open] .menu-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  .menu-toggle span {
+    transition: transform 120ms linear, opacity 120ms linear;
+  }
+
+  header {
+    --header-h: 58px;
+  }
+
+  /* Portrait phone through portrait tablet: the menu is the screen.
+     Landscape tablet and up keep the compact dropdown. */
+  @media (max-width: 1023.98px) and (orientation: portrait) {
+    .menu-panel {
+      position: fixed;
+      inset: var(--header-h) 0 0;
+      z-index: 20;
+      width: auto;
+      height: auto;
+      padding: 22px 22px calc(22px + env(safe-area-inset-bottom));
+      border: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .menu-panel ul {
+      border-top: 1px solid var(--color-ink-black);
+    }
+
+    .menu-link {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--color-ink-black);
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .menu-link:hover {
+      background-color: transparent;
+    }
+  }
+
+  :global(html.menu-open) {
+    overflow: hidden;
+  }
+</style>

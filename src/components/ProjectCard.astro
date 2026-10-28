@@ -1,0 +1,59 @@
+---
+import Plate from "./Plate.astro";
+import type { Project } from "../types/content";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const images = project.images ?? [];
+const hasVisual = images.length > 0;
+---
+
+<article data-reveal class="flex flex-col gap-[14px]">
+  {
+    hasVisual ? (
+      <Plate
+        images={images}
+        word={project.plate}
+        class="aspect-[4/3] shadow-project"
+      />
+    ) : (
+      /* NDA work gets no visual; a stack kicker keeps the card's rhythm. */
+      <p class="border-t border-ink-black pt-[9px] font-body text-[12px] uppercase leading-none tracking-[0.14em] text-charcoal-deep">
+        {project.plate}
+      </p>
+    )
+  }
+
+  <h3
+    class="font-body text-[20px] font-light leading-[1.15] tracking-[-0.02em] text-ink-black"
+  >
+    {project.title}
+  </h3>
+
+  <p
+    class="font-body text-[16px] leading-[1.27] tracking-[-0.01em] text-ink-black"
+  >
+    {project.description}
+  </p>
+
+  <p
+    class:list={[
+      "font-body text-[14px] leading-[1.18] tracking-[-0.02em] text-charcoal-deep",
+      /* Image cards pin the meta row so it aligns across the grid row. */
+      hasVisual && "mt-auto",
+    ]}
+  >
+    {project.meta}
+    {
+      project.href && (
+        <>
+          <span aria-hidden="true"> · </span>
+          <a class="link-underline" href={project.href}>{project.hrefLabel}</a>
+        </>
+      )
+    }
+  </p>
+</article>

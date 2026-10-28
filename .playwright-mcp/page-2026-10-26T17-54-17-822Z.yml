@@ -1,0 +1,81 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Semarang, ID
+      - link "Deny Rianto — Fullstack Engineer" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - group [ref=e7]:
+        - generic "Menu" [ref=e8] [cursor=pointer]
+  - main [ref=e12]:
+    - region "BUILT, SHIPPED." [ref=e13]:
+      - generic [ref=e15]:
+        - article [ref=e16]:
+          - generic [ref=e17]:
+            - paragraph [ref=e18]: NEXT
+            - generic [ref=e19]:
+              - button "Previous image" [ref=e20]
+              - paragraph [ref=e23]: 1 / 2
+              - button "Next image" [ref=e24]
+          - heading "Katresna Creations" [level=3] [ref=e27]
+          - paragraph [ref=e28]: "A digital service platform built end to end: Strapi content, Next.js SSR for search visibility, PostgreSQL, S3-compatible media. Ships through a self-hosted pipeline behind a Docker reverse proxy — the unglamorous infrastructure that keeps a small product online."
+          - paragraph [ref=e29]:
+            - text: Product Engineer · Katresna · 2025–Present ·
+            - link "katresna.web.id" [ref=e30] [cursor=pointer]:
+              - /url: https://katresna.web.id
+        - article [ref=e31]:
+          - paragraph [ref=e33]: GO
+          - heading "National Competition Platform" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Go services, a Nuxt and Tailwind interface, PostgreSQL, and Docker deploys. Delivered ahead of schedule, with external vendor APIs integrated end to end. Two vendors, one contract, no excuses in the retro.
+          - paragraph [ref=e36]: Fullstack & DevOps · Azura Labs · 2025–Present
+    - paragraph [ref=e39]: DENY
+    - region "SCHEMA TO SERVER." [ref=e40]
+    - paragraph [ref=e43]: FULLSTACK
+    - region [ref=e44]:
+      - generic [ref=e45]:
+        - heading "STACK" [level=2] [ref=e46]
+        - paragraph [ref=e47]: Six languages. One deployment habit.
+        - paragraph [ref=e48]: "Ordered by use: CORE first, FAMILIAR last."
+      - list [ref=e49]
+    - region [ref=e50]:
+      - generic [ref=e51]:
+        - heading "THE RECORD" [level=2] [ref=e52]
+        - paragraph [ref=e53]: Roles, newest first.
+      - list [ref=e54]
+      - paragraph [ref=e55]: "Earlier: curriculum content developer at Semarang State Polytechnic, writing WordPress and WooCommerce course modules (Oct – Dec 2024)."
+    - region [ref=e56]:
+      - generic [ref=e57]:
+        - heading "PAPER TRAIL" [level=2] [ref=e58]
+        - paragraph [ref=e59]: Education, GPA, five certifications.
+      - list [ref=e61]
+  - contentinfo [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - heading "Contact" [level=2] [ref=e65]
+        - list [ref=e66]:
+          - listitem [ref=e67]:
+            - link "denyrianto@outlook.com" [ref=e68] [cursor=pointer]:
+              - /url: mailto:denyrianto@outlook.com
+          - listitem [ref=e69]:
+            - link "github.com/denyryn" [ref=e70] [cursor=pointer]:
+              - /url: https://github.com/denyryn
+          - listitem [ref=e71]:
+            - link "linkedin.com/in/denyrianto" [ref=e72] [cursor=pointer]:
+              - /url: https://linkedin.com/in/denyrianto
+          - listitem [ref=e73]:
+            - link "portfolio.rianto.site" [ref=e74] [cursor=pointer]:
+              - /url: https://portfolio.rianto.site
+      - generic [aria-hidden] [ref=e75]:
+        - paragraph [ref=e76]: THIS IS TO CERTIFY
+        - paragraph [ref=e91]: Deny Rianto
+        - generic [ref=e92]:
+          - term [ref=e93]: NAME
+          - definition [ref=e94]: Deny Rianto
+          - term [ref=e95]: BASE
+          - definition [ref=e96]: Semarang, ID
+          - term [ref=e97]: YEAR
+          - definition [ref=e98]: "2026"
+    - generic [ref=e99]:
+      - paragraph [ref=e100]: Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands — jack of all trades, master of none, often better than a master of one.
+      - paragraph [ref=e101]: © 2026 Deny Rianto. No cookies, no analytics, no tracking.

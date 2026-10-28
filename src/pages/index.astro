@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import WorkSection from "../components/WorkSection.astro";
+import Banner from "../components/Banner.astro";
+import Bio from "../components/Bio.astro";
+import StackSection from "../components/StackSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import CredentialsSection from "../components/CredentialsSection.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+---
+
+<BaseLayout>
+  <Header />
+  <main id="main">
+    <WorkSection />
+    <Banner word="SELECTED WORK" scale="selected-work" />
+    <Bio />
+    <Banner word="THE RECORD" scale="the-record" />
+    <StackSection />
+    <ExperienceSection />
+    <CredentialsSection />
+  </main>
+  <SiteFooter />
+</BaseLayout>

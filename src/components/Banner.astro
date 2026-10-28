@@ -1,0 +1,40 @@
+---
+interface Props {
+  word: string;
+  scale?: "selected-work" | "the-record";
+}
+
+const { word, scale = "selected-work" } = Astro.props;
+---
+
+<div aria-hidden="true" class="w-full overflow-clip bg-ink-black">
+  <div class="shell @container">
+    <p
+      data-banner
+      class:list={[
+        "banner-word font-display font-bold uppercase text-parchment leading-[0.73] tracking-[-0.03em] whitespace-nowrap py-[0.06em]",
+        scale === "selected-work" ? "banner-selected-work" : "banner-the-record",
+      ]}
+    >
+      {word}
+    </p>
+  </div>
+</div>
+
+<style>
+  /* Calibrated to the shipped face: Bodoni Moda Variable 700, tracking −0.03em,
+     measured in-browser at 100px. Advance widths: SELECTED WORK = 8.46em,
+     THE RECORD = 6.38em (the space and the trailing letter-space included).
+     1cqw is 1% of the shell's content box, so the size that fills 95% of the
+     measure is 95 ÷ em: SELECTED WORK 11.23cqw, THE RECORD 14.89cqw. That lands
+     at 41px / 55px on a 390px screen, 127px / 168px at 1200px, and 152px /
+     202px once the shell tops out at 1440px — ~95% of the measure at every
+     width, so neither line wraps and neither edge clips. */
+  .banner-selected-work {
+    font-size: 11.23cqw;
+  }
+
+  .banner-the-record {
+    font-size: 14.89cqw;
+  }
+</style>

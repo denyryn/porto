@@ -1,0 +1,33 @@
+---
+interface Props {
+  label: string;
+  kicker?: string;
+  note?: string;
+  id?: string;
+}
+
+const { label, kicker, note, id } = Astro.props;
+---
+
+<div class="flex flex-col gap-[9px]">
+  <h2
+    id={id}
+    class="font-body text-[14px] uppercase leading-none tracking-[0.14em] text-charcoal-deep"
+  >
+    {label}
+  </h2>
+  {
+    kicker && (
+      <p class="font-body text-[19px] leading-[1.18] tracking-[-0.02em] text-ink-black">
+        {kicker}
+      </p>
+    )
+  }
+  {
+    note && (
+      <p class="font-body text-[14px] leading-[1.18] tracking-[-0.02em] text-charcoal-deep">
+        {note}
+      </p>
+    )
+  }
+</div>

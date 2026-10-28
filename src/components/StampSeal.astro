@@ -1,0 +1,66 @@
+---
+const rows = [
+  { label: "NAME", value: "Deny Rianto" },
+  { label: "BASE", value: "Semarang, ID" },
+  { label: "YEAR", value: "2026" },
+];
+---
+
+<div
+  aria-hidden="true"
+  class="stamp-edge w-[236px] max-w-full bg-parchment px-[14px] py-[12px] text-center"
+>
+  <p class="font-body text-[9px] uppercase leading-none tracking-[0.18em] text-charcoal-deep">
+    THIS IS TO CERTIFY
+  </p>
+
+  <svg
+    viewBox="0 0 100 100"
+    class="mx-auto mt-[8px] h-[54px] w-[54px] text-ember-orange"
+  >
+    {
+      Array.from({ length: 16 }, (_, i) => (
+        <line
+          x1="50"
+          y1="50"
+          x2="50"
+          y2="5"
+          transform={`rotate(${(i * 360) / 16} 50 50)`}
+          stroke="currentColor"
+          stroke-width="2"
+        />
+      ))
+    }
+    <circle
+      cx="50"
+      cy="50"
+      r="17"
+      fill="var(--color-parchment)"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+  </svg>
+
+  <p
+    class="mt-[6px] -rotate-[2deg] font-mid text-[21px] italic leading-none text-ink-black"
+  >
+    Deny Rianto
+  </p>
+
+  <dl
+    class="mt-[10px] grid grid-cols-[auto_1fr] gap-x-[8px] gap-y-[2px] border-t border-ink-black pt-[7px] text-left"
+  >
+    {
+      rows.map((row) => (
+        <>
+          <dt class="font-body text-[9px] uppercase leading-[1.4] tracking-[0.14em] text-charcoal-deep">
+            {row.label}
+          </dt>
+          <dd class="font-body text-[10px] leading-[1.4] text-ink-black">
+            {row.value}
+          </dd>
+        </>
+      ))
+    }
+  </dl>
+</div>

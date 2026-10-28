@@ -1,0 +1,50 @@
+---
+import { hero } from "../constants/site";
+---
+
+<div
+  data-intro
+  class="grid gap-[22px] md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.6fr)] md:items-center md:gap-[43px]"
+>
+  <figure class="w-full max-w-[260px] md:max-w-none">
+    <img
+      src={hero.portrait.src}
+      alt={hero.portrait.alt}
+      width="900"
+      height="1125"
+      fetchpriority="high"
+      decoding="async"
+      class="aspect-[4/5] w-full object-cover shadow-portrait"
+    />
+  </figure>
+
+  <div class="@container flex flex-col items-start">
+    <h1
+      id="work-title"
+      class="font-display font-bold uppercase text-ink-black text-[clamp(40px,12cqw,86px)] leading-[0.91] tracking-[-0.02em]"
+    >
+      {hero.display}
+    </h1>
+    <p
+      class="mt-[14px] max-w-[46ch] font-body text-[17px] leading-[1.27] tracking-[-0.01em] text-ink-black"
+    >
+      {hero.subhead}
+    </p>
+
+    <ul class="mt-[22px] flex flex-wrap items-baseline gap-x-[22px] gap-y-[10px]">
+      {
+        hero.downloads.map((item) => (
+          <li>
+            <a
+              class="link-underline font-body text-[16px] leading-none tracking-[-0.01em] text-ink-black"
+              href={item.href}
+              download
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

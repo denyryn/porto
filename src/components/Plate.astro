@@ -1,0 +1,111 @@
+---
+interface Props {
+  /** Card visuals, in order. The first image is the cover. */
+  images: string[];
+  /** Display word printed over the visual. */
+  word?: string;
+  class?: string;
+}
+
+const { images, word, class: className = "" } = Astro.props;
+
+/** One image prints as a still; more than one gets the carousel controls. */
+const multi = images.length > 1;
+---
+
+<div
+  class:list={["relative w-full overflow-hidden bg-bone-cream", className]}
+  data-carousel={multi ? "" : undefined}
+>
+  {
+    multi ? (
+      images.map((src, index) => (
+        <img
+          src={src}
+          alt=""
+          width="1000"
+          height="750"
+          loading={index === 0 ? "eager" : "lazy"}
+          fetchpriority={index === 0 ? "high" : undefined}
+          decoding="async"
+          hidden={index > 0}
+          data-slide
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+      ))
+    ) : (
+      <img
+        src={images[0]}
+        alt=""
+        width="1000"
+        height="750"
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    )
+  }
+  {
+    word && (
+      <p class="absolute bottom-[10px] left-[10px] bg-parchment px-[6px] py-[3px] font-display text-[clamp(17px,2vw,26px)] font-bold uppercase leading-[0.8] tracking-[-0.03em] text-ink-black">
+        {word}
+      </p>
+    )
+  }
+  {
+    /* Kicker keeps the bottom-left corner; controls own the bottom-right. */
+    multi && (
+      <div class="print:hidden absolute bottom-[10px] right-[10px] flex items-stretch border border-ink-black bg-parchment">
+        <button
+          type="button"
+          data-carousel-step="-1"
+          aria-label="Previous image"
+          class="flex h-10 w-10 items-center justify-center border-r border-ink-black bg-parchment text-ink-black transition-colors duration-100 hover:bg-bone-cream focus-visible:outline-offset-[-3px]"
+        >
+          <svg
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.25"
+            aria-hidden="true"
+          >
+            <path d="M9.5 3.5 5 8l4.5 4.5"></path>
+          </svg>
+        </button>
+
+        <p
+          data-carousel-status
+          aria-live="polite"
+          class="flex min-w-[44px] items-center justify-center border-r border-ink-black px-[6px] text-[12px] leading-none tracking-[0.06em] tabular-nums text-ink-black"
+        >
+          {`1 / ${images.length}`}
+        </p>
+
+        <button
+          type="button"
+          data-carousel-step="1"
+          aria-label="Next image"
+          class="flex h-10 w-10 items-center justify-center bg-parchment text-ink-black transition-colors duration-100 hover:bg-bone-cream focus-visible:outline-offset-[-3px]"
+        >
+          <svg
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.25"
+            aria-hidden="true"
+          >
+            <path d="M6.5 3.5 11 8l-4.5 4.5"></path>
+          </svg>
+        </button>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  import "../scripts/carousel";
+</script>

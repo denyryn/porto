@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+import { site } from "../constants/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, site.origin).href;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.jobTitle,
+  url: site.origin,
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Semarang",
+    addressRegion: "Central Java",
+    addressCountry: "ID",
+  },
+  alumniOf: { "@type": "CollegeOrUniversity", name: site.alumniOf },
+  sameAs: [site.github, site.linkedin, site.origin],
+  knowsAbout: site.knowsAbout,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#e2dedb" />
+    <meta name="author" content={site.name} />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={site.ogTitle} />
+    <meta property="og:description" content={site.ogDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={site.ogTitle} />
+    <meta name="twitter:description" content={site.ogDescription} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+    <script>
+      import "../scripts/motion";
+    </script>
+  </body>
+</html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 100;
+    padding: 10px 14px;
+    background-color: var(--color-ink-black);
+    color: var(--color-parchment);
+    font-family: var(--font-body);
+    font-size: 16px;
+    transform: translateY(-160%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  @media print {
+    .skip-link {
+      display: none;
+    }
+  }
+</style>

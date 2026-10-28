@@ -1,0 +1,100 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Semarang, ID
+      - link "Deny Rianto — Fullstack Engineer" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - group [ref=e7]:
+        - generic "Menu" [ref=e8] [cursor=pointer]
+  - main [ref=e12]:
+    - region [ref=e13]:
+      - generic [ref=e14]:
+        - figure [ref=e15]:
+          - img "Stylised portrait of Deny Rianto against a warm parchment background." [ref=e16]
+        - generic [ref=e17]:
+          - heading "BUILT, SHIPPED." [level=1] [ref=e18]
+          - paragraph [ref=e19]: Fullstack engineer in Semarang, Indonesia. Two years shipping web and mobile products end to end. Schema, API, container, deploy.
+          - list [ref=e20]:
+            - listitem [ref=e21]:
+              - link "Download CV (PDF)" [ref=e22] [cursor=pointer]:
+                - /url: /deny-rianto-cv.pdf
+            - listitem [ref=e23]:
+              - link "Portfolio (PDF)" [ref=e24] [cursor=pointer]:
+                - /url: /deny-rianto-portfolio.pdf
+      - generic [ref=e25]:
+        - article [ref=e26]:
+          - paragraph [ref=e27]: NEXT
+          - heading "Katresna Creations" [level=3] [ref=e28]
+          - paragraph [ref=e29]: "A digital service platform built end to end: Strapi content, Next.js SSR for search visibility, PostgreSQL, S3-compatible media. Ships through a self-hosted pipeline behind a Docker reverse proxy — the unglamorous infrastructure that keeps a small product online."
+          - paragraph [ref=e30]:
+            - text: Product Engineer · Katresna · 2025–Present ·
+            - link "katresna.web.id" [ref=e31] [cursor=pointer]:
+              - /url: https://katresna.web.id
+        - article [ref=e32]:
+          - paragraph [ref=e33]: GO
+          - heading "National Competition Platform" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Go services, a Nuxt and Tailwind interface, PostgreSQL, and Docker deploys. Delivered ahead of schedule, with external vendor APIs integrated end to end. Two vendors, one contract, no excuses in the retro.
+          - paragraph [ref=e36]: Fullstack & DevOps · Azura Labs · 2025–Present
+        - article [ref=e37]:
+          - paragraph [ref=e38]: INERTIA
+          - heading "National Competition System" [level=3] [ref=e39]
+          - paragraph [ref=e40]: "Sole developer on a national competition system: Laravel, Inertia.js, and React — 90% complete in the first week, vendor APIs wired in end to end. Frontend and backend work cut overall app speed by 90%."
+          - paragraph [ref=e41]: Hybrid Fullstack Developer · IHDC · Sept 2026 – Present
+        - article [ref=e42]:
+          - paragraph [ref=e43]: JAVA
+          - heading "Ministry Portal — Maintenance & Features" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Sole bugfix owner through the maintenance window, then 35% of feature delivery. Java Spring Boot, jQuery, Bootstrap. Maintenance teaches what the original author meant, not what he wrote.
+          - paragraph [ref=e46]: Fullstack Engineer · Azura Labs · 2025–Present
+    - paragraph [ref=e49]: SELECTED WORK
+    - region [ref=e50]:
+      - heading "ABOUT" [level=2] [ref=e52]
+    - paragraph [ref=e55]: THE RECORD
+    - region [ref=e56]:
+      - generic [ref=e57]:
+        - heading "STACK" [level=2] [ref=e58]
+        - paragraph [ref=e59]: Six languages. One deployment habit.
+        - paragraph [ref=e60]: "Ordered by use: CORE first, FAMILIAR last."
+      - list [ref=e61]
+    - region [ref=e62]:
+      - generic [ref=e63]:
+        - heading "THE RECORD" [level=2] [ref=e64]
+        - paragraph [ref=e65]: Roles, newest first.
+      - list [ref=e66]
+      - paragraph [ref=e67]: "Earlier: curriculum content developer at Semarang State Polytechnic, writing WordPress and WooCommerce course modules (Oct – Dec 2024)."
+    - region [ref=e68]:
+      - generic [ref=e69]:
+        - heading "PAPER TRAIL" [level=2] [ref=e70]
+        - paragraph [ref=e71]: Education, GPA, five certifications.
+      - list [ref=e73]
+  - contentinfo [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - heading "Contact" [level=2] [ref=e77]
+        - list [ref=e78]:
+          - listitem [ref=e79]:
+            - link "denyrianto@outlook.com" [ref=e80] [cursor=pointer]:
+              - /url: mailto:denyrianto@outlook.com
+          - listitem [ref=e81]:
+            - link "github.com/denyryn" [ref=e82] [cursor=pointer]:
+              - /url: https://github.com/denyryn
+          - listitem [ref=e83]:
+            - link "linkedin.com/in/denyrianto" [ref=e84] [cursor=pointer]:
+              - /url: https://linkedin.com/in/denyrianto
+          - listitem [ref=e85]:
+            - link "portfolio.rianto.site" [ref=e86] [cursor=pointer]:
+              - /url: https://portfolio.rianto.site
+      - generic [aria-hidden] [ref=e87]:
+        - paragraph [ref=e88]: THIS IS TO CERTIFY
+        - paragraph [ref=e103]: Deny Rianto
+        - generic [ref=e104]:
+          - term [ref=e105]: NAME
+          - definition [ref=e106]: Deny Rianto
+          - term [ref=e107]: BASE
+          - definition [ref=e108]: Semarang, ID
+          - term [ref=e109]: YEAR
+          - definition [ref=e110]: "2026"
+    - generic [ref=e111]:
+      - paragraph [ref=e112]: Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands — jack of all trades, master of none, often better than a master of one.
+      - paragraph [ref=e113]: © 2026 Deny Rianto. No cookies, no analytics, no tracking.

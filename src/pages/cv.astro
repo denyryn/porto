@@ -1,0 +1,253 @@
+---
+import "../styles/global.css";
+import { contacts } from "../constants/site";
+import {
+  roles,
+  stackTiers,
+  education,
+  certifications,
+} from "../constants/profile";
+
+/* Verbatim from docs/CV.md — the print CV keeps the source wording. */
+const summary =
+  "Fullstack Engineer with 2 years of hands-on experience shipping production web and mobile applications — from API design and database modeling to containerized deployment. Adept at writing clean, maintainable code and collaborating across time zones in remote-first teams.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Deny Rianto — Curriculum Vitae</title>
+  </head>
+  <body>
+    <main class="cv">
+      <header class="cv-head">
+        <h1>Deny Rianto</h1>
+        <p class="cv-role">Fullstack Engineer · DevOps · Semarang, Indonesia</p>
+        <ul class="cv-contact">
+          {
+            contacts.map((contact) => (
+              <li>
+                <a href={contact.href}>{contact.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p>{summary}</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        {
+          roles.map((role) => (
+            <article class="cv-role-block">
+              <div class="cv-role-head">
+                <h3>{role.role}</h3>
+                <p class="cv-dates">{role.dates}</p>
+              </div>
+              <p class="cv-org">{role.org}</p>
+              <p>{role.line}</p>
+              <p class="cv-stack">{role.stack.join(" · ")}</p>
+            </article>
+          ))
+        }
+      </section>
+
+      <section>
+        <h2>Stack</h2>
+        <dl class="cv-stack-list">
+          {
+            stackTiers.map((tier) => (
+              <div>
+                <dt>{tier.tier}</dt>
+                <dd>{tier.skills.join(" · ")}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="cv-role-head">
+          <h3>{education.award}</h3>
+          <p class="cv-dates">{education.years}</p>
+        </div>
+        <p class="cv-org">{education.school}</p>
+        <p class="cv-stack">{education.gpa}</p>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul class="cv-certs">
+          {
+            certifications.map((cert) => (
+              <li>
+                <span>{cert.name}</span>
+                <span class="cv-dates">
+                  {cert.issuer} · {cert.date}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  /* Full-bleed sheet: the page margin would print white, so pad the body box
+     instead — body background then covers the whole A4 canvas. */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background-color: var(--color-parchment);
+    color: var(--color-ink-black);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-optical-sizing: auto;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+
+  .cv {
+    max-width: 180mm;
+    margin-inline: auto;
+    padding: 24px 12px 43px;
+  }
+
+  .cv-head {
+    border-bottom: 1px solid var(--color-ink-black);
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 34pt;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .cv-role {
+    margin-top: 4px;
+    font-size: 11pt;
+  }
+
+  .cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-top: 6px;
+    font-size: 9.5pt;
+    color: var(--color-charcoal-deep);
+  }
+
+  .cv-contact a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  section {
+    margin-top: 14px;
+    break-inside: avoid;
+  }
+
+  h2 {
+    font-family: var(--font-body);
+    font-size: 8.5pt;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-charcoal-deep);
+    border-bottom: 1px solid var(--color-ink-black);
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-family: var(--font-mid);
+    font-size: 12.5pt;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .cv-role-block {
+    margin-bottom: 10px;
+  }
+
+  .cv-role-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 14px;
+  }
+
+  .cv-dates {
+    font-size: 9pt;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-charcoal-deep);
+  }
+
+  .cv-org {
+    font-size: 10.5pt;
+  }
+
+  .cv-stack {
+    font-size: 9pt;
+    color: var(--color-charcoal-deep);
+    margin-top: 2px;
+  }
+
+  .cv-stack-list div {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 8px;
+    padding: 3px 0;
+    font-size: 9.5pt;
+  }
+
+  .cv-stack-list dt {
+    text-transform: uppercase;
+    font-size: 8pt;
+    letter-spacing: 0.12em;
+    color: var(--color-charcoal-deep);
+    padding-top: 2px;
+  }
+
+  .cv-certs li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 14px;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-ink-black) 25%, transparent);
+    padding: 3px 0;
+  }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cv {
+      /* Was 14mm @page margin + 1mm centering slack + 180mm column;
+         padding keeps the same optical inset on the full-width box. */
+      max-width: none;
+      padding: 14mm 15mm;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import StampSeal from "./StampSeal.astro";
+import { colophon, contacts, copyright } from "../constants/site";
+---
+
+<footer id="contact" class="shell py-[28px] md:py-[43px]">
+  <div class="grid gap-[43px] md:grid-cols-[1fr_auto] md:items-start">
+    <div>
+      <h2 class="sr-only">Contact</h2>
+      <ul class="flex flex-col items-start gap-[10px]">
+        {
+          contacts.map((contact) => (
+            <li>
+              <a
+                href={contact.href}
+                class="link-underline font-body text-[19px] leading-none tracking-[-0.01em] text-ink-black"
+              >
+                {contact.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <StampSeal />
+  </div>
+
+  <div class="mt-[43px] border-t border-ink-black pt-[17px] text-center">
+    <p class="font-body text-caption text-charcoal-deep">{colophon}</p>
+    <p class="mt-[7px] font-body text-caption text-charcoal-deep">
+      {copyright}
+    </p>
+  </div>
+</footer>

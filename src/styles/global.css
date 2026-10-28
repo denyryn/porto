@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* Self-hosted faces. Canopee / Editorial New / Domaine Display are unlicensed;
+   substitutes per docs/PLAN.md §7. No CDN, no runtime requests. */
+@import "@fontsource-variable/bodoni-moda/standard.css";
+@import "@fontsource-variable/source-serif-4/standard.css";
+@import "@fontsource-variable/playfair-display/index.css";
+@import "@fontsource-variable/playfair-display/wght-italic.css";
+@import "lenis/dist/lenis.css";
+
+@theme {
+  /* Colors — DESIGN.md tokens */
+  --color-parchment: #e2dedb;
+  --color-bone-cream: #cdc6be;
+  --color-ink-black: #1d1d1b;
+  --color-charcoal: #69645f;
+  /* Muted text only. Charcoal (#69645f) is 4.38:1 on parchment: under the 4.5:1
+     floor for text, so text uses this darkened step instead. */
+  --color-charcoal-deep: #5b564f;
+  --color-pure-black: #000000;
+  --color-ember-orange: #c03f13;
+
+  /* Faces */
+  --font-display: "Bodoni Moda Variable", "Bodoni Moda", Didot, "Times New Roman", serif;
+  --font-body: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
+  --font-mid: "Playfair Display Variable", "Playfair Display", Georgia, serif;
+
+  /* Type scale — DESIGN.md */
+  --text-caption: 14px;
+  --text-caption--line-height: 1.18;
+  --text-caption--letter-spacing: -0.27px;
+  --text-body-sm: 16px;
+  --text-body-sm--line-height: 1.27;
+  --text-body-sm--letter-spacing: -0.16px;
+  --text-body: 17px;
+  --text-body--line-height: 1.27;
+  --text-body--letter-spacing: -0.3px;
+  --text-subheading: 22px;
+  --text-subheading--line-height: 1.18;
+  --text-subheading--letter-spacing: -0.55px;
+  --text-heading-sm: 32px;
+  --text-heading-sm--line-height: 1.11;
+  --text-heading-sm--letter-spacing: -0.96px;
+  --text-heading: 65px;
+  --text-heading--line-height: 0.91;
+  --text-heading--letter-spacing: -2.08px;
+
+  /* Layout breakpoints — PLAN.md §8 (1440 / 1200 / 768) */
+  --breakpoint-wide: 1200px;
+
+  /* Shapes — DESIGN.md */
+  --radius-tag: 2.88px;
+  --radius-card: 11.52px;
+  --shadow-project: rgba(29, 29, 27, 0.2) -4px 4px 6px 0px;
+  --shadow-portrait: rgba(29, 29, 27, 0.2) -5px 3px 6px 0px;
+}
+
+/* Layout constants (not utility namespaces) */
+:root {
+  --page-max: 1440px;
+  --section-gap: 43px;
+  --card-pad: 24px;
+  --element-gap: 14px;
+  --shell-pad: clamp(12px, 3vw, 43px);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-parchment);
+    color: var(--color-ink-black);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-synthesis-weight: none;
+    /* Bodoni Moda and Source Serif 4 both ship an optical-size axis: hairlines
+       sharpen on banners, serifs stay sturdy at caption sizes. */
+    font-optical-sizing: auto;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+  }
+
+  /* Ragged-right display type; balance stops one-word last lines. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink-black);
+    outline-offset: 3px;
+  }
+
+  /* Anchor targets clear the sticky header. */
+  [id] {
+    scroll-margin-top: 58px;
+  }
+
+  /* Kill the 300ms tap delay on touch. */
+  a,
+  button,
+  label,
+  summary {
+    touch-action: manipulation;
+  }
+
+  ::selection {
+    background-color: var(--color-ember-orange);
+    color: var(--color-parchment);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility shell {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--shell-pad);
+}
+
+/* Editorial text link — DESIGN.md "Text Link with Underline" */
+@utility link-underline {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-ink-black);
+  text-underline-offset: 3px;
+  transition: color 120ms linear, text-decoration-color 120ms linear;
+
+  &:hover {
+    color: var(--color-pure-black);
+    text-decoration-color: var(--color-pure-black);
+  }
+}
+
+/* Perforated postage-stamp edge without images or gradients. */
+@utility stamp-edge {
+  border: 2px dotted var(--color-ink-black);
+  border-radius: var(--radius-card);
+}
+
+/* Printed output (scripts/build-pdfs.mjs) must not slice cards across pages. */
+@media print {
+  article {
+    break-inside: avoid;
+  }
+}
