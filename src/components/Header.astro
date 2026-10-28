@@ -27,19 +27,14 @@ import { navItems, site } from "../constants/site";
         <span class="block h-px w-[22px] bg-ink-black"></span>
       </summary>
 
-      <nav
-        aria-label="Sections"
-        class="menu-panel absolute right-0 top-[calc(100%+10px)] z-20 w-[190px] border border-ink-black bg-parchment py-[10px]"
-      >
+      <nav aria-label="Sections" class="menu-panel">
         <ul class="flex flex-col">
           {
             navItems.map((item) => (
               <li>
-                <a
-                  href={item.href}
-                  class="menu-link block px-[14px] py-[7px] font-body text-[17px] leading-none text-ink-black transition-colors duration-100 hover:bg-bone-cream"
-                >
+                <a href={item.href} class="menu-link font-body text-ink-black">
                   {item.label}
+                  <span class="menu-arrow" aria-hidden="true"></span>
                 </a>
               </li>
             ))
@@ -83,38 +78,60 @@ import { navItems, site } from "../constants/site";
 
   header {
     --header-h: 58px;
+    --menu-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 4 16 16' fill='none' stroke='white' stroke-width='1'%3E%3Cpath d='M5 19 19 5M8 5h11v11'/%3E%3C/svg%3E");
   }
 
-  /* Portrait phone through portrait tablet: the menu is the screen.
-     Landscape tablet and up keep the compact dropdown. */
-  @media (max-width: 1023.98px) and (orientation: portrait) {
-    .menu-panel {
-      position: fixed;
-      inset: var(--header-h) 0 0;
-      z-index: 20;
-      width: auto;
-      height: auto;
-      padding: 22px 22px calc(22px + env(safe-area-inset-bottom));
-      border: 0;
-      overflow-y: auto;
-      overscroll-behavior: contain;
-    }
+  /* The fullscreen panel meets the header flush; the hairline would otherwise
+     draw a line across the top of the takeover. Transparent, not removed, so the
+     1px of border box keeps the panel's offset landing exactly. */
+  header:has(.menu[open]) {
+    border-bottom-color: transparent;
+  }
 
-    .menu-panel ul {
-      border-top: 1px solid var(--color-ink-black);
-    }
+  /* The menu is the screen, not a dropdown — at every width. Phone and desktop
+     get the same takeover; only the type and row rhythm grow with the viewport
+     (32px rows on mobile, 64px at 1440). */
+  .menu-panel {
+    position: fixed;
+    inset: calc(var(--header-h) + 1px) 0 0;
+    z-index: 20;
+    padding: clamp(22px, 2.4vw, 34px) 0
+      calc(22px + env(safe-area-inset-bottom));
+    background-color: var(--color-parchment);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 
-    .menu-link {
-      padding: 17px 0;
-      border-bottom: 1px solid var(--color-ink-black);
-      font-size: 32px;
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
+  .menu-panel ul {
+    border-top: 1px solid var(--color-ink-black);
+  }
 
-    .menu-link:hover {
-      background-color: transparent;
-    }
+  .menu-link {
+    position: relative;
+    display: block;
+    padding-block: clamp(17px, 2.2vw, 28px);
+    padding-inline: var(--shell-pad);
+    border-bottom: 1px solid var(--color-ink-black);
+    font-size: clamp(32px, 4vw + 6px, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  /* The picked row inverts to ink and grows a thin arrow on the far right.
+     GSAP owns both tweens (scripts/menu.ts); CSS only lays out the arrow, so
+     the row stays light until the pointer or keyboard lands on it. */
+  .menu-arrow {
+    position: absolute;
+    top: 50%;
+    right: var(--shell-pad);
+    width: 1em;
+    height: 1em;
+    /* Masked, not an SVG file: the arrow inherits the row's text colour. */
+    background-color: currentColor;
+    -webkit-mask: var(--menu-arrow) center / contain no-repeat;
+    mask: var(--menu-arrow) center / contain no-repeat;
+    opacity: 0;
+    pointer-events: none;
   }
 
   :global(html.menu-open) {
