@@ -150,9 +150,99 @@
   border-radius: var(--radius-card);
 }
 
-/* Printed output (scripts/build-pdfs.mjs) must not slice cards across pages. */
+/* ── Print layer ──────────────────────────────────────────────────────────
+   scripts/build-pdfs.mjs prints `/` on A4 landscape at scale 0.78 with
+   backgrounds on. That gives a ~1441×1019 CSS px layout viewport and no
+   @page margin (a margin would print white, breaking the parchment bleed),
+   so every page inset comes from the padding a forced break lands on.
+   Screen styles are untouched: everything below is print-only. */
 @media print {
   article {
     break-inside: avoid;
+  }
+
+  /* Interactive chrome: hamburger menu, dead download links. The masthead
+     (location + wordmark) stays — it is the document's title line. */
+  .menu,
+  [data-intro] ul {
+    display: none;
+  }
+
+  body > header {
+    padding-top: 16px;
+  }
+
+  /* The cqw-sized ink bands cannot be calibrated for the wider print
+     measure without clipping, and the sections carry their own labels.
+     They are replaced by the hairline section rules below. */
+  main > div[aria-hidden="true"] {
+    display: none;
+  }
+
+  /* Page composition: opening + work grid | about + stack | experience |
+     credentials + contact. Each section fits one page on its own, so a
+     forced break plus break-inside: avoid means no row, card or heading
+     is ever cut. */
+  #about,
+  #experience,
+  #credentials {
+    break-before: page;
+  }
+
+  #work,
+  #about,
+  #stack,
+  #experience,
+  #credentials,
+  #contact,
+  .project-grid {
+    break-inside: avoid;
+  }
+
+  /* Page 1: trim the opening so the whole six-card grid shares the sheet. */
+  #work {
+    padding-block: 22px 30px;
+  }
+
+  #work figure {
+    max-width: 320px;
+  }
+
+  #work .project-grid {
+    margin-top: 30px;
+  }
+
+  /* Separator rhythm: a full-measure hairline above each section label,
+     inset by the section's own padding, so page starts read as section
+     starts without the banners. */
+  #about::before,
+  #stack::before,
+  #experience::before,
+  #credentials::before {
+    content: "";
+    display: block;
+    border-top: 1px solid var(--color-ink-black);
+    margin-bottom: 22px;
+  }
+
+  /* Rows never split across pages. */
+  #stack > ul > li,
+  #experience li,
+  #credentials li {
+    break-inside: avoid;
+  }
+
+  /* Footer closes the sheet: the four links run as one editorial row
+     beside the stamp instead of a stranded vertical list. */
+  #contact > div {
+    align-items: end;
+  }
+
+  #contact ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 22px;
+    row-gap: 10px;
   }
 }

@@ -66,7 +66,7 @@ export const bio = {
 
 /* Colophon names the faces actually shipped, not the unlicensed originals. */
 export const colophon =
-  "Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands — jack of all trades, master of none, often better than a master of one.";
+  "Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands.";
 
 export const copyright =
   "© 2026 Deny Rianto. No cookies, no analytics, no tracking.";

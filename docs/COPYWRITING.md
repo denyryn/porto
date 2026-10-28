@@ -253,7 +253,7 @@ Small kicker beneath: `Education, GPA, five certifications.`
 
 **Colophon (caption, centred, Charcoal):**
 
-> Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands — jack of all trades, master of none, often better than a master of one.
+> Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands.
 
 **Copyright line:**
 

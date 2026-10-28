@@ -1,6 +1,8 @@
 ---
 import StampSeal from "./StampSeal.astro";
-import { colophon, contacts, copyright } from "../constants/site";
+import { colophon, contacts, copyright, site } from "../constants/site";
+
+const host = new URL(site.origin).host;
 ---
 
 <footer id="contact" class="shell py-[28px] md:py-[43px]">
@@ -32,4 +34,29 @@ import { colophon, contacts, copyright } from "../constants/site";
       {copyright}
     </p>
   </div>
+
+  <p class="running-foot">{site.wordmark} · {host}</p>
 </footer>
+
+<style>
+  /* Screen keeps the colophon as the only closing line. Print repeats the
+     foot on every sheet so a page read on its own still says whose it is. */
+  .running-foot {
+    display: none;
+  }
+
+  @media print {
+    .running-foot {
+      display: block;
+      position: fixed;
+      inset-inline: 0;
+      bottom: 18px;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-charcoal-deep);
+    }
+  }
+</style>
