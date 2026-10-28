@@ -8,6 +8,9 @@ import StackSection from "../components/StackSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
 import CredentialsSection from "../components/CredentialsSection.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+
+/* Static by design: the SSR default is for future dynamic routes. */
+export const prerender = true;
 ---
 
 <BaseLayout>

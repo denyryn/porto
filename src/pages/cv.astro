@@ -8,6 +8,9 @@ import {
   certifications,
 } from "../constants/profile";
 
+/* Static by design: the SSR default is for future dynamic routes. */
+export const prerender = true;
+
 /* Verbatim from docs/CV.md — the print CV keeps the source wording. */
 const summary =
   "Fullstack Engineer with 2 years of hands-on experience shipping production web and mobile applications — from API design and database modeling to containerized deployment. Adept at writing clean, maintainable code and collaborating across time zones in remote-first teams.";
