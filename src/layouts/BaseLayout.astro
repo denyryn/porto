@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { site } from "../constants/site";
+import { hero, site } from "../constants/site";
 
 interface Props {
   title?: string;
@@ -13,6 +13,7 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, site.origin).href;
+const ogImage = new URL("/images/og.jpg", site.origin).href;
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -49,9 +50,16 @@ const personSchema = {
     <meta property="og:title" content={site.ogTitle} />
     <meta property="og:description" content={site.ogDescription} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={hero.portrait.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={site.ogTitle} />
     <meta name="twitter:description" content={site.ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={hero.portrait.alt} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />

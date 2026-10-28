@@ -7,11 +7,11 @@ export const site = {
   address: "Semarang, Central Java, Indonesia",
   email: "denyrianto@outlook.com",
   location: "Semarang, ID",
-  wordmark: "Deny Rianto — Fullstack Engineer",
+  wordmark: "Deny Rianto, Fullstack Engineer",
   title: "Deny Rianto — Fullstack Engineer & DevOps, Semarang",
   description:
     "Fullstack engineer in Semarang, ID. Go, Laravel, Nuxt, PostgreSQL, Docker. Two years of government, healthcare, and competition systems — built end to end.",
-  ogTitle: "Deny Rianto — Fullstack Engineer",
+  ogTitle: "Deny Rianto, Fullstack Engineer is",
   ogDescription:
     "Two years of production web systems: Go, Laravel, Nuxt, PostgreSQL, Docker. Built end to end, deployed on self-hosted infrastructure.",
   github: "https://github.com/denyryn",

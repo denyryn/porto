@@ -28,7 +28,7 @@ Banned words: passionate, leverage, seamless, cutting-edge, journey, dynamic, ro
 | Slot | Copy |
 |---|---|
 | Header left | `Semarang, ID` |
-| Header center | `Deny Rianto — Fullstack Engineer` |
+| Header center | `Deny Rianto, Fullstack Engineer` |
 | Menu items | `Work` · `About` · `Stack` · `Experience` · `Contact` |
 | Section anchors | `#work` `#about` `#stack` `#experience` `#contact` |
 | Skip link (a11y) | `Skip to content` |
@@ -277,7 +277,11 @@ Only true if it is. If analytics is added later, cut the second sentence rather 
 
 **OG title**
 
-> Deny Rianto — Fullstack Engineer
+> Deny Rianto, Fullstack Engineer is
+
+**OG image**
+
+> `/images/og.jpg` — 1200×630, portrait centred on its own background.
 
 **OG description**
 

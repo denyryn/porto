@@ -60,7 +60,7 @@ A `mailto:` link beats a form for one person. Revisit only if a case-study page 
 
 ### 4.1 Header bar
 - Left: `Semarang, ID` (Editorial New 19px/300).
-- Center: `Deny Rianto — Fullstack Engineer`.
+- Center: `Deny Rianto, Fullstack Engineer`.
 - Right: hamburger. Menu = anchor links: Work / About / Stack / Experience / Contact.
 - 1px Ink Black bottom border, Parchment background. Sticky is optional; if sticky, keep it 1px and quiet.
 
