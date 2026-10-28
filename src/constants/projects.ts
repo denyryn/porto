@@ -22,7 +22,7 @@ export const projects: Project[] = [
     plate: "INERTIA",
     description:
       "Sole developer on a national competition system: Laravel, Inertia.js, and React — 90% complete in the first week, vendor APIs wired in end to end. Frontend and backend work cut overall app speed by 90%.",
-    meta: "Hybrid Fullstack Developer · ID Career · Sept 2026 – Present",
+    meta: "Hybrid Fullstack Engineer & IT Lead · ID Career · Sept 2026 – Present",
   },
   {
     title: "Ministry Portal — Maintenance & Features",

@@ -61,7 +61,7 @@ export const experience = {
 
 export const roles: Role[] = [
   {
-    role: "Hybrid Fullstack Developer",
+    role: "Hybrid Fullstack Engineer & IT Lead",
     org: "ID Career",
     dates: "Sept 2026 – Present",
     line: "National competition system built on Laravel, Inertia.js, and React — 90% of the build in the first week, vendor APIs integrated alongside. As sole developer, frontend and backend work cut overall app speed by 90%.",

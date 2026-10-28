@@ -56,7 +56,7 @@ Go (6), Nuxt.js (6), PostgreSQL (6), Docker (5), Laravel (5), Java Spring Boot (
 
 ## Experience
 
-### Hybrid Fullstack Developer — ID Career
+### Hybrid Fullstack Engineer & IT Lead — ID Career
 *Sept 2026 – Present | Semarang, Indonesia*
 
 - Working on **national competition system**, collaborating with external vendors for API integration

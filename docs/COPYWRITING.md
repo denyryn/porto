@@ -80,7 +80,7 @@ Cards 4–6 are NDA client work and carry no visual — a hairline rule and a st
 ### Card 3 — National Competition System
 - **Title:** `National Competition System`
 - **Description:** Sole developer on a national competition system: Laravel, Inertia.js, and React — 90% complete in the first week, vendor APIs wired in end to end. Frontend and backend work cut overall app speed by 90%.
-- **Metadata:** `Hybrid Fullstack Developer · ID Career · Sept 2026 – Present`
+- **Metadata:** `Hybrid Fullstack Engineer & IT Lead · ID Career · Sept 2026 – Present`
 - **Visual:** none for now — stack kicker only (assets kept, unreferenced)
 
 ### Card 4 — Ministry Portal
@@ -184,7 +184,7 @@ Small kicker beneath: `Roles, newest first.`
 - **Stack:** `Go · Nuxt.js · Tailwind CSS · PostgreSQL · Docker · Java Spring Boot · jQuery · Bootstrap · Laravel`
 
 ### Row 2
-- **Role:** `Hybrid Fullstack Developer`
+- **Role:** `Hybrid Fullstack Engineer & IT Lead`
 - **Org:** `ID Career`
 - **Dates:** `Sept 2026 – Present`
 - **Line:** National competition system built on Laravel, Inertia.js, and React — 90% of the build in the first week, vendor APIs integrated alongside. As sole developer, frontend and backend work cut overall app speed by 90%.

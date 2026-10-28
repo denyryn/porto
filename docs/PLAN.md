@@ -142,7 +142,7 @@ Three rows, newest first, plus one tertiary line. `EXPERIENCE` is the dullest wo
 | Org | Role | Dates | One-line proof |
 |---|---|---|---|
 | Azura Labs | Hybrid Fullstack Engineer | Sept 2025 – Present | Three distinct engagements: competition platform (Go/Nuxt), ministry project (Spring Boot), SatuSehat (Laravel) |
-| ID Career | Hybrid Fullstack Developer | Sept 2026 – Present | National competition system, vendor API integration, Laravel + Inertia + React |
+| ID Career | Hybrid Fullstack Engineer & IT Lead | Sept 2026 – Present | National competition system, vendor API integration, Laravel + Inertia + React |
 | PT. Muri Digital Grup Internasional | Remote Mobile Developer Intern | Apr – Jun 2025 | React Native + Expo, Agile/remote delivery |
 | *(tertiary, caption)* | Curriculum Content Developer, Semarang State Polytechnic | Oct – Dec 2024 | WordPress/WooCommerce course modules — one line, no card |
 
