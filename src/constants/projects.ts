@@ -55,7 +55,7 @@ export const projects: Project[] = [
     hrefLabel: "github.com/denyryn/histora",
   },
   {
-    title: "Web UI Commentator",
+    title: "Wecom",
     plate: "MV3",
     description:
       "Point at any element on a page, leave a comment, and export a locator a coding agent can act on: selector, tag, text, geometry, URL. No screenshots, no DevTools, nothing leaves the browser.",

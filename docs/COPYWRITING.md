@@ -107,8 +107,8 @@ Nine cards. Visuals are off: every card renders a hairline rule and a stack kick
 - **Link label:** `github.com/denyryn/histora`
 - **Visual:** none — stack kicker `MV3`
 
-### Card 8 — Web UI Commentator
-- **Title:** `Web UI Commentator`
+### Card 8 — Wecom
+- **Title:** `Wecom`
 - **Description:** Point at any element on a page, leave a comment, and export a locator a coding agent can act on: selector, tag, text, geometry, URL. No screenshots, no DevTools, nothing leaves the browser.
 - **Metadata:** `Browser extension · Personal · 2026`
 - **Link label:** `github.com/denyryn/wecom`
@@ -376,6 +376,6 @@ Facts used, and where they come from — check this before publishing.
 | All 5 project stack lists | Experience + Projects tech stack lines |
 | Job titles and dates | Experience |
 | 80% of delivery via AI agent harness (Opencode) | Technical Skills → Workflow |
-| Histora, Web UI Commentator, Authentia — purpose, stack, browsers | Projects → Browser extensions |
+| Histora, Wecom, Authentia — purpose, stack, browsers | Projects → Browser extensions |
 
 Anything not in this table does not go on the page.

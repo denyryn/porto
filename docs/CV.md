@@ -110,7 +110,7 @@ Go (6), Nuxt.js (6), PostgreSQL (6), Docker (5), Laravel (5), Java Spring Boot (
 *2026 | Author*
 
 - **Histora** — removes chosen pages from browsing history. Exact rules (domain, subdomain, keyword, path), a local audit log, a passcode-locked settings page, and a scheduled re-check. Chrome/Chromium/Edge and Firefox builds, tag-driven releases with SHA-256 checksums.
-- **Web UI Commentator (`wecom`)** — records a page element as a CSS selector, tag, text, geometry and URL with a comment attached, and exports it as JSON for a coding agent. Chrome, Edge, Firefox (Manifest V3).
+- **Wecom** — records a page element as a CSS selector, tag, text, geometry and URL with a comment attached, and exports it as JSON for a coding agent. Chrome, Edge, Firefox (Manifest V3).
 - **Authentia** — TOTP authenticator: live codes in the toolbar popup, AES-GCM encrypted vault behind a PBKDF2 passcode, encrypted backup export/import, and QR capture by framing the code on the page. Chromium MV3 and Firefox MV2.
 - **Tech stack:** TypeScript, React, Extension.js, Tailwind CSS, Vitest, GitHub Actions
 - **URLs:** https://github.com/denyryn/histora · https://github.com/denyryn/wecom · https://github.com/denyryn/authentia

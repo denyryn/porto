@@ -97,7 +97,7 @@ solid parchment. See `COPYWRITING.md §3` for the control labels.
 | 5 | SatuSehat Hospital Integration | — | National health-platform integration, Laravel |
 | 6 | Cross-Platform Mobile App | — | React Native + Expo; shows range beyond web |
 | 7 | Histora | github.com/denyryn/histora | Personal tool; TypeScript, browser APIs, strict rule matching, privacy claim with nothing to hide |
-| 8 | Web UI Commentator | github.com/denyryn/wecom | Personal tool; solves a problem his own agent workflow has — element locators for AI agents |
+| 8 | Wecom | github.com/denyryn/wecom | Personal tool; solves a problem his own agent workflow has — element locators for AI agents |
 | 9 | Authentia | github.com/denyryn/authentia | Personal tool; TOTP, AES-GCM vault, PBKDF2, QR capture — security-shaped work beyond web CRUD |
 
 **No badges.** LIVE/CLIENT chips were removed at the owner's request (Oct 2026).
