@@ -199,7 +199,7 @@
     break-inside: avoid;
   }
 
-  /* Page 1: trim the opening so the whole six-card grid shares the sheet. */
+  /* Page 1: trim the opening so the whole work grid shares the sheet. */
   #work {
     padding-block: 22px 30px;
   }

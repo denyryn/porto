@@ -42,7 +42,7 @@ Single scrolling page. Order mirrors the Miranda layout rhythm: strip → grid �
 |---|---|---|---|
 | 1 | Header bar | Editorial Header Bar | Location, name, menu |
 | 2 | Opening strip | Three-Column Section Header | portrait / `BUILT, SHIPPED.` — sets the broadsheet tone, carries the page's `h1` |
-| 3 | Work grid | Project Grid Card ×5 | The five things he has actually built |
+| 3 | Work grid | Project Grid Card ×9 | Six client and product builds, then three personal browser extensions |
 | 4 | Banner I | Display Banner Block | **SELECTED WORK** — closes the work half of the page |
 | 5 | About | Label + drop-cap paragraph | Who he is, where, what he does |
 | 6 | Banner II | Display Banner Block | **THE RECORD** — announces the technical half |
@@ -72,12 +72,12 @@ A `mailto:` link beats a form for one person. Revisit only if a case-study page 
 - Mobile: portrait above the type, capped at 260px wide.
 
 ### 4.3 Work grid
-Six cards, 3-column grid (3 + 3) at ≥1200px, 2-col from 768px, 1-col below.
+Nine cards, 3-column grid (3 + 3 + 3) at ≥1200px, 2-col from 768px, 1-col below.
 Card = visual + title (Editorial New 20px/300) + 2–3 line description + metadata row (role / org / year).
-Card order: public product first, then client work by technical weight.
+Card order: public product first, then client work by technical weight, then the personal extension trio.
 
-**Visuals — currently off.** All six cards render with no image (owner request, Oct 2026): a hairline rule
-plus a small uppercase stack kicker (`NEXT`, `GO`, `INERTIA`, `JAVA`, `LARAVEL`, `EXPO`) occupies the top of
+**Visuals — currently off.** All nine cards render with no image (owner request, Oct 2026): a hairline rule
+plus a small uppercase stack kicker (`NEXT`, `GO`, `INERTIA`, `JAVA`, `LARAVEL`, `EXPO`, then `MV3` on all three tools) occupies the top of
 the card. An empty box reads as a missing asset; the kicker reads as a decision. The screenshot assets are
 still on disk, unreferenced by `src/constants/projects.ts`.
 
@@ -96,6 +96,9 @@ solid parchment. See `COPYWRITING.md §3` for the control labels.
 | 4 | Ministry Portal — Maintenance & Features | — | Sole bugfix owner, 35% feature contribution, Java stack |
 | 5 | SatuSehat Hospital Integration | — | National health-platform integration, Laravel |
 | 6 | Cross-Platform Mobile App | — | React Native + Expo; shows range beyond web |
+| 7 | Histora | github.com/denyryn/histora | Personal tool; TypeScript, browser APIs, strict rule matching, privacy claim with nothing to hide |
+| 8 | Web UI Commentator | github.com/denyryn/wecom | Personal tool; solves a problem his own agent workflow has — element locators for AI agents |
+| 9 | Authentia | github.com/denyryn/authentia | Personal tool; TOTP, AES-GCM vault, PBKDF2, QR capture — security-shaped work beyond web CRUD |
 
 **No badges.** LIVE/CLIENT chips were removed at the owner's request (Oct 2026).
 DESIGN.md still specifies a badge slot; ignore it — the metadata row carries the truth.

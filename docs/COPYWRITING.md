@@ -60,9 +60,8 @@ No "Home" item — the wordmark is the home link.
 
 ## 3. Work section
 
-Six cards. Cards 1–3 carry photographs; a card with more than one picture cycles them inside its plate.
-Cards 4–6 are NDA client work and carry no visual — a hairline rule and a stack kicker (`JAVA`, `LARAVEL`,
-`EXPO`) sit where the image would be.
+Nine cards. Visuals are off: every card renders a hairline rule and a stack kicker (`NEXT`, `GO`, `INERTIA`,
+`JAVA`, `LARAVEL`, `EXPO`, then `MV3` on the three tools). A card with more than one picture cycles them inside its plate.
 
 ### Card 1 — Katresna Creations
 - **Title:** `Katresna Creations`
@@ -100,6 +99,27 @@ Cards 4–6 are NDA client work and carry no visual — a hairline rule and a st
 - **Description:** A cross-platform mobile app in React Native and Expo, delivered in sprint cycles within a remote Agile team. Held the API contract and data flow with backend engineers.
 - **Metadata:** `Mobile Developer Intern · PT. Muri Digital Grup Internasional · 2025`
 - **Visual:** none (NDA) — stack kicker only
+
+### Card 7 — Histora
+- **Title:** `Histora`
+- **Description:** A browser extension that removes chosen pages from history as they load. Exact rules — domain, subdomain, keyword, path — a local audit log, and a scheduled re-check. No telemetry, no network requests, no remote code.
+- **Metadata:** `Browser extension · Personal · 2026`
+- **Link label:** `github.com/denyryn/histora`
+- **Visual:** none — stack kicker `MV3`
+
+### Card 8 — Web UI Commentator
+- **Title:** `Web UI Commentator`
+- **Description:** Point at any element on a page, leave a comment, and export a locator a coding agent can act on: selector, tag, text, geometry, URL. No screenshots, no DevTools, nothing leaves the browser.
+- **Metadata:** `Browser extension · Personal · 2026`
+- **Link label:** `github.com/denyryn/wecom`
+- **Visual:** none — stack kicker `MV3`
+
+### Card 9 — Authentia
+- **Title:** `Authentia`
+- **Description:** A TOTP authenticator in the toolbar: live codes, a vault encrypted behind a passcode, encrypted backups, and QR capture by framing the code on the page — no camera. Chromium MV3 and Firefox MV2.
+- **Metadata:** `Browser extension · Personal · 2026`
+- **Link label:** `github.com/denyryn/authentia`
+- **Visual:** none — stack kicker `MV3`
 
 ### Media controls (only on cards with more than one image)
 | Slot | Copy |
@@ -356,5 +376,6 @@ Facts used, and where they come from — check this before publishing.
 | All 5 project stack lists | Experience + Projects tech stack lines |
 | Job titles and dates | Experience |
 | 80% of delivery via AI agent harness (Opencode) | Technical Skills → Workflow |
+| Histora, Web UI Commentator, Authentia — purpose, stack, browsers | Projects → Browser extensions |
 
 Anything not in this table does not go on the page.

@@ -45,4 +45,31 @@ export const projects: Project[] = [
       "A cross-platform mobile app in React Native and Expo, delivered in sprint cycles within a remote Agile team. Held the API contract and data flow with backend engineers.",
     meta: "Mobile Developer Intern · PT. Muri Digital Grup Internasional · 2025",
   },
+  {
+    title: "Histora",
+    plate: "MV3",
+    description:
+      "A browser extension that removes chosen pages from history as they load. Exact rules — domain, subdomain, keyword, path — a local audit log, and a scheduled re-check. No telemetry, no network requests, no remote code.",
+    meta: "Browser extension · Personal · 2026",
+    href: "https://github.com/denyryn/histora",
+    hrefLabel: "github.com/denyryn/histora",
+  },
+  {
+    title: "Web UI Commentator",
+    plate: "MV3",
+    description:
+      "Point at any element on a page, leave a comment, and export a locator a coding agent can act on: selector, tag, text, geometry, URL. No screenshots, no DevTools, nothing leaves the browser.",
+    meta: "Browser extension · Personal · 2026",
+    href: "https://github.com/denyryn/wecom",
+    hrefLabel: "github.com/denyryn/wecom",
+  },
+  {
+    title: "Authentia",
+    plate: "MV3",
+    description:
+      "A TOTP authenticator in the toolbar: live codes, a vault encrypted behind a passcode, encrypted backups, and QR capture by framing the code on the page — no camera. Chromium MV3 and Firefox MV2.",
+    meta: "Browser extension · Personal · 2026",
+    href: "https://github.com/denyryn/authentia",
+    hrefLabel: "github.com/denyryn/authentia",
+  },
 ];
