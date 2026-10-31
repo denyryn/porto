@@ -1,0 +1,66 @@
+# Deny Rianto — Fullstack Engineer
+
+> Fullstack engineer in Semarang, Central Java, Indonesia. Two years of production
+> web systems built end to end: schema and API through container, reverse proxy, and
+> deploy. Go, Laravel, Nuxt, Spring Boot, PostgreSQL, Docker. AI coding agents draft
+> roughly 80% of the code; he directs, reviews, integrates, and owns what ships.
+
+Site: https://portfolio.rianto.site
+Email: denyrianto@outlook.com
+GitHub: https://github.com/denyryn
+LinkedIn: https://linkedin.com/in/denyrianto
+Location: Semarang, Central Java, Indonesia
+Availability: open to fullstack and DevOps work
+
+## Experience
+
+- Hybrid Fullstack Engineer & IT Lead — ID Career, Sept 2026–Present.
+  National competition system on Laravel, Inertia.js, React; 90% of the build in the
+  first week, vendor APIs integrated alongside. Sole developer; cut overall app
+  speed by 90%.
+- Hybrid Fullstack Engineer — Azura Labs, Sept 2025–Present.
+  Three engagements: national competition platform in Go and Nuxt, a ministry
+  project in Spring Boot, SatuSehat (Indonesia's national health platform)
+  integration in Laravel. Reviews others' code while shipping his own.
+- Remote Mobile Developer Intern — PT. Muri Digital Grup Internasional, Apr–Jun 2025.
+  React Native and Expo delivery in a remote Agile team.
+- Earlier: curriculum content developer, Semarang State Polytechnic (Oct–Dec 2024).
+
+## Projects
+
+- Katresna Creations — https://katresna.web.id
+  Digital service platform: Strapi content, Next.js SSR for search visibility,
+  PostgreSQL, S3-compatible media, self-hosted Docker pipeline.
+- Histora — https://github.com/denyryn/histora
+  Browser extension that removes chosen pages from history as they load. Exact
+  rules, local audit log, no telemetry, no network requests.
+- Wecom — https://github.com/denyryn/wecom
+  Points at any element on a page, leaves a comment, and exports a locator a coding
+  agent can act on. Nothing leaves the browser.
+- Authentia — https://github.com/denyryn/authentia
+  TOTP authenticator extension: encrypted vault, encrypted backups, QR capture by
+  framing the code on the page. Chromium MV3 and Firefox MV2.
+- NDA client work (no public link): national competition platform (Go, Nuxt),
+  ministry portal maintenance and features (Spring Boot), SatuSehat hospital
+  integration (Laravel).
+
+## Stack
+
+- Core: Go, Nuxt.js, Docker, Tailwind CSS, Laravel, CI/CD
+- Working: Java Spring Boot, React, jQuery, Bootstrap, Git, Linux server
+  administration, PostgreSQL, MySQL
+- Familiar: TypeScript, Next.js, Express.js, Nest.js, Inertia.js, Redis, Dokploy,
+  Coolify
+
+## Education and credentials
+
+- D4, Computer Engineering Technology — Semarang State Polytechnic, 2022–2026.
+  GPA 3.88 / 4.00.
+- TOEIC 815 (ETS, Jul 2026); Frontend Developer React and Problem Solving Basic
+  (HackerRank, Jun 2025); Oracle Database Programming SQL (Jul 2023) and Database
+  Design (May 2023, Oracle Academy).
+
+## Optional
+
+- [Full CV (PDF)](https://portfolio.rianto.site/resume.pdf)
+- [Portfolio (PDF)](https://portfolio.rianto.site/deny-rianto-portfolio.pdf)
