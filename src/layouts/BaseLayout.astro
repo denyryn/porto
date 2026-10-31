@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 import { hero, site } from "../constants/site";
 
 interface Props {
@@ -75,6 +76,7 @@ const personSchema = {
     <script>
       import "../scripts/motion";
     </script>
+    <Analytics />
   </body>
 </html>
 

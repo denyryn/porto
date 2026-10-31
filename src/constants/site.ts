@@ -69,4 +69,4 @@ export const colophon =
   "Set in Bodoni Moda and Source Serif 4. Written, built, deployed, and maintained by one pair of hands.";
 
 export const copyright =
-  "© 2026 Deny Rianto. No cookies, no analytics, no tracking.";
+  "© 2026 Deny Rianto. Cookieless, aggregate page counts only.";

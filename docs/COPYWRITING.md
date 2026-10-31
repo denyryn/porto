@@ -277,9 +277,11 @@ Small kicker beneath: `Education, GPA, five certifications.`
 
 **Copyright line:**
 
-> © 2026 Deny Rianto. No cookies, no analytics, no tracking.
+> © 2026 Deny Rianto. Cookieless, aggregate page counts only.
 
-Only true if it is. If analytics is added later, cut the second sentence rather than soften it.
+Vercel Web Analytics is installed (cookieless, aggregate, no cross-site tracking). Keep the
+claim true: no cookies, no personal profiles. If a tracking or cookie-based tool is ever added,
+cut the clause rather than soften it.
 
 **Phone:** intentionally absent from the site. Do not add it back without a decision in `PLAN.md §11`.
 
